@@ -1,0 +1,462 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --info-color: #17a2b8;
+    --warning-color: #ffc107;
+    --success-color: #28a745;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Base Styles */
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: #333;
+    padding-top: 56px;
+    background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.ProP{
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-family: var(--body-font);
+}
+
+/*bienvenue*/
+#welcome-message {
+  position: fixed;
+  bottom: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 2.5s ease;
+  z-index: 9998;
+}
+
+/* chargement */
+
+#preloader-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: fadeOut 1s ease 3.2s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* telegram */
+.UserTelegram{
+    font-weight: 800;
+    color: rgb(40, 238, 53);
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-family: var(--body-font);
+}
+/* .tutoTelegram{
+    font-weight: 600;
+    color: blue;
+    text-decoration: none;
+    font-size: 1rem;
+    text-decoration: underline;
+} */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+.container .titre2{
+    color:red;
+}
+/* Header & Hero */
+.hero-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    position: relative;
+    overflow: hidden;
+}
+.img-heroz{
+    width: 370px;
+    border-radius: 300px;
+    /* https://smoothshadows.com/#djEsMSw0LDAuNjEsMTA3LDY1LDY5LCMwMzA3MTIsI2YzZjRmNiwjZmZmZmZmLDI%3D */
+box-shadow: 4px 4px 7px rgba(3, 7, 18, 0.15),
+  17px 16px 27px rgba(3, 7, 18, 0.30),
+  39px 37px 60px rgba(3, 7, 18, 0.46),
+  69px 65px 107px rgba(3, 7, 18, 0.61);
+
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('HeroB.png') repeat;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    font-weight: 600;
+    border-bottom: none;
+}
+
+.level-card {
+    cursor: pointer;
+}
+
+.level-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Styles */
+.section-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.section-header {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+/* Lists */
+.fa-ul {
+    margin-left: 2em;
+}
+
+.fa-li {
+    left: -2em;
+    width: 2em;
+    top: 0.25em;
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.telegram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: #229ED9;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(34, 158, 217, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+  }
+
+  .telegram-link:hover {
+    background-color: #1c8dc9;
+    transform: translateY(-2px);
+  }
+
+  .telegram-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: 480px) {
+    .telegram-link {
+      font-size: 14px;
+      padding: 10px 16px;
+    }
+
+    .telegram-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--secondary-color), #1a252f);
+}
+
+footer h5 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Form Styles */
+.form-control {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .section-card {
+        padding: 20px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .section-card,
+.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode .card-header {
+    background-color: #2d2d2d !important;
+}
+
+.dark-mode .form-control {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+.dark-mode .form-control:focus {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-mode footer {
+    background: linear-gradient(135deg, #1a1a1a, #121212);
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode h5, 
+.dark-mode h6 {
+    color: #f5f5f5;
+}
+
+/* Utility Classes */
+.mt-6 {
+    margin-top: 4rem;
+}
+
+.mb-6 {
+    margin-bottom: 4rem;
+}
+
+.shadow-soft {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-info {
+    background-color: var(--info-color) !important;
+}
+
+.bg-warning {
+    background-color: var(--warning-color) !important;
+}
+
+.bg-success {
+    background-color: var(--success-color) !important;
+}
