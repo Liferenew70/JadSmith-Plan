@@ -39,6 +39,25 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--body-font);
 }
 
+/* Effet de survol */
+.hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Style des badges */
+.badge {
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.badge:hover {
+  transform: scale(1.05);
+}
+
 /*bienvenue*/
 #welcome-message {
   position: fixed;
@@ -74,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   animation: fadeOut 1s ease 3.2s forwards;
 }
+
 
 @keyframes fadeOut {
   to {
